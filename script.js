@@ -12,8 +12,24 @@ const endImg = document.querySelector(".endoImg");
 const im = document.getElementById("imgLogo");
 const navSideBar = document.querySelector(".navSSide");
 const close = document.querySelector(".close");
-
-if (window.innerWidth < 750) {
+let isSmallScreen = window.innerWidth < 750;
+const currentIsSmallScreen = window.innerWidth < 750;
+function closeNav() {
+  close.classList.add("hidden");
+  nav.style.visibility = "hidden";
+  navSideBar.classList.add("hidden");
+  endImg.classList.toggle("hidden");
+  nav.classList.toggle("navSide");
+  logo.classList.remove("logoS");
+}
+function openNav() {
+  close.classList.remove("hidden");
+  nav.style.visibility = "visible";
+  nav.classList.toggle("navSide");
+  logo.classList.add("logoS");
+  im.remove();
+}
+if (currentIsSmallScreen == isSmallScreen) {
   end.classList.toggle("hidden");
   end.style.paddingRight = "5px";
   end.style.paddingTop = "5px";
@@ -22,20 +38,10 @@ if (window.innerWidth < 750) {
   navSideBar.style.zIndex = "1";
   navSideBar.style.width = "100%";
   navSideBar.style.justifyContent = "space-between";
-  end.addEventListener("click", function () {
-    close.classList.remove("hidden");
-    nav.style.visibility = "visible";
-    nav.classList.toggle("navSide");
-    logo.classList.add("logoS");
-    im.remove();
-    close.addEventListener("click", function () {
-      nav.style.visibility = "hidden";
-      navSideBar.classList.add("hidden");
-      endImg.classList.remove("hidden");
-      nav.classList.toggle("navSide");
-      logo.classList.remove("logoS");
-    });
-  });
+  if (window.innerWidth < 750) {
+    end.addEventListener("click", openNav);
+    close.addEventListener("click", closeNav);
+  }
 }
 
 dropdownMenu1.addEventListener("mouseenter", function () {
