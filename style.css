@@ -1,0 +1,292 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  /* border: 1px solid red; */
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: rgba(250, 250, 250, 255);
+  /* border: 1px red solid; */
+}
+
+nav {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  top: 15px;
+  display: flex;
+  gap: 2.7rem;
+}
+
+.logo {
+  display: inline-block;
+  padding-left: 1rem;
+}
+nav ul {
+  display: block;
+  color: black;
+}
+
+nav ul li {
+  padding-right: 2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+span {
+  opacity: 0.6;
+}
+.left {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.login {
+  cursor: pointer;
+}
+.reg {
+  border: 2px solid hsl(0, 0%, 40%);
+  align-content: center;
+  border-radius: 5px;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+}
+.reg:hover {
+  border-color: black;
+}
+
+.dropdown1,
+.dropdown2 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  align-content: center;
+  justify-content: center;
+  width: 9rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  gap: 0.2rem;
+}
+.dropdown2 {
+  width: 8rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+}
+
+.aside {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.aside p {
+  font-size: 20px;
+  opacity: 60%;
+  width: 75%;
+}
+
+.aside h1 {
+  font-size: 60px;
+  width: 22rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  width: 35%;
+  height: 3rem;
+  background-color: black;
+  color: #ffff;
+  border: 0px;
+  border-radius: 1rem;
+  font-size: medium;
+}
+.btn:hover {
+  background: transparent;
+  color: black;
+  border: 2px solid hsl(0, 0%, 41%);
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.mainImg {
+  height: 35rem;
+}
+
+@media (max-width: 750px) {
+  .close{
+    align-self: flex-end;
+    padding-right: 5px;
+    width: 25px;
+    height: 20px;
+  }
+  .container {
+    flex-direction: column;
+    width: fit-content;
+  }
+  nav{
+    visibility: hidden;
+  }
+  .navSide{
+    gap: 0;
+    top: 0px;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    flex-wrap: wrap;
+ 
+  }
+  .logo {
+    padding-top: 5px;
+    width: 100px;
+    height: 25px;
+    display: inline;
+  }
+  .logoS {
+    position: fixed;
+    left: 0px;
+    width: 50%;
+    background-color: #fff;
+    height: 25px;
+    background-color: rgba(250, 250, 250, 255);
+  }
+
+  .nav-content {
+    position: fixed;
+    align-self: flex-start;
+    height: 100%;
+    right: 0px;
+    padding-left: 30px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #fff;
+    margin-left: auto;
+    width: 50%;
+    order:2;
+  }
+  .dropdown1,
+  .dropdown2 {
+    position: static;
+    display: none;
+    width: auto;
+    padding: 0.5rem .5rem;
+    text-align: center;
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    gap: 0.2rem;
+  }
+
+  .dropdown1Men:hover .dropdown1,
+  .dropdown2Men:hover .dropdown2 {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+  }
+  .left {
+    display: block;
+    position: fixed;
+    margin-top: 130px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    text-align: center;
+    background-color: #fff;
+    width: 40%;
+    margin-right: 0px;
+    order: 1;
+  }
+
+  .login,
+  .reg {
+    opacity: 0.6;
+  }
+  .reg {
+    margin: 0px;
+  }
+  .aside {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    gap: 2rem;
+  }
+  .mainImg {
+    display: none;
+  }
+  .btn {
+    align-self: center;
+  }
+  .icons {
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .aside h1 {
+    font-size: 18px;
+  }
+  .img {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    content: url("./images/image-hero-mobile.png");
+  }
+
+  .aside p {
+    font-size: 15px;
+    width: 67%;
+    align-self: center;
+  }
+  .aside h1 {
+    width: 100%;
+  }
+  body {
+    /* display: block; */
+    height: 100%;
+  }
+}

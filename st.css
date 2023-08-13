@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+  }
+  
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+  
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: rgba(250, 250, 250, 255);
+    /* border: 1px red solid; */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .dropdown1,
+  .dropdown2 {
+    width: 8rem;
+    height: 7rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 2.5rem;
+    left: 10rem;
+    list-style: none;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+  }
+  .dropdown2 {
+    left: 20rem;
+  }
+  
+  .navbar {
+    position: absolute;
+    top:5px;
+    /* margin-top: 1rem; */
+    color: hsl(0, 0%, 41%);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+  
+  .buttons {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+  }
+  .login {
+    padding-top: 0.16rem;
+    cursor: pointer;
+  }
+  ul li {
+    cursor: pointer;
+  }
+  .Register {
+    border: 2px solid hsl(0, 0%, 41%);
+    align-content: center;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6rem;
+    padding-top: 0.16rem;
+    text-align: center;
+    cursor: pointer;
+    color: black;
+  }
+  .Register:hover {
+    border-color: black;
+  }
+  
+  .horizontal-list {
+    list-style: none;
+    gap: 3rem;
+    display: flex;
+  }
+ 
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  .end {
+    display: none;
+  }
+  @media (max-width: 750px) {
+   
+    .end {
+        position: absolute;
+        right: 1rem;
+        top:1rem;
+      display: inline-block;
+    }
+    .navbar {
+      justify-content: space-between;
+      width: 98%;
+      margin-left: auto;
+    }
+    .navbar ul {
+      display: none;
+    }
+    .iconImg{
+        
+        position: absolute;
+        left: 1rem;
+        top:1rem;
+    }
+    .img {
+      display: block;
+      width: 100%;
+      height: fit-content;
+      content: url("./images/image-hero-mobile.png");
+    }
+  
+    body {
+      display: block;
+      height: fit-content;
+    }
+  }
+  

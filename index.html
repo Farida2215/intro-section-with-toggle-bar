@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="navSSide hidden">
+      <label for="loho" class="logoo"
+        ><img src="logo.svg" class="logo" alt="Logo icon"
+      /></label>
+      <label for="end" class="endo hidden"
+        ><img src="icon-menu.svg" class="end" alt="Logo icon"
+      /></label>
+    </div>
+    <nav>
+      <label for="loho" class="logoo" id="imgLogo"
+        ><img src="logo.svg" class="logo" alt="Logo icon"
+      /></label>
+      <label for="endI" class="endoImg hidden"
+        ><img src="icon-menu.svg" class="end" alt="Logo icon"
+      /></label>
+      <div class="nav-content">
+        <img class="close hidden" src="icon-close-menu.svg">
+        <ul>
+          <li class="dropdown1Men">
+            <span>Features</span
+            ><img class="arrow1" src="icon-arrow-down.svg" />
+            <ul class="dropdown1 hidden">
+              <li>
+                <img src="icon-todo.svg" />
+                Todo List
+              </li>
+              <li>
+                <img src="icon-calendar.svg" />
+                Calender
+              </li>
+              <li>
+                <img src="icon-reminders.svg" />
+                Reminders
+              </li>
+              <li><img src="icon-planning.svg" /> Planning</li>
+            </ul>
+          </li>
+          <li class="dropdown2Men">
+            <span>Company</span
+            ><img class="arrow2" src="icon-arrow-down.svg" />
+            <ul class="dropdown2 hidden">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li><span>Careers</span></li>
+          <li><span>About</span></li>
+        </ul>
+      </div>
+      <div class="left">
+        <label class="login">Login</label>
+        <label class="reg">Register</label>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="img hidden"><img src="" /></div>
+      <div class="aside">
+        <b><h1>Make remote work</h1></b>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="btn">Learn more</button>
+        <footer class="icons">
+          <img
+            src="client-databiz.svg"
+            style="width: 70px; height: 15px"
+          />
+          <img
+            src="client-audiophile.svg"
+            style="width: 50px; height: 30px"
+          />
+          <img
+            src="client-meet.svg"
+            style="width: 60px; height: 15px"
+          />
+          <img
+            src="client-maker.svg"
+            style="width: 60px; height: 20px"
+          />
+        </footer>
+      </div>
+      <main>
+        <img class="mainImg" src="image-hero-desktop.png" alt="" />
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
