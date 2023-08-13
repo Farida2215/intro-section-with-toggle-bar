@@ -12,8 +12,7 @@ const endImg = document.querySelector(".endoImg");
 const im = document.getElementById("imgLogo");
 const navSideBar = document.querySelector(".navSSide");
 const close = document.querySelector(".close");
-let isSmallScreen = window.innerWidth < 750;
-const currentIsSmallScreen = window.innerWidth < 750;
+
 function closeNav() {
   close.classList.add("hidden");
   nav.style.visibility = "hidden";
@@ -29,7 +28,7 @@ function openNav() {
   logo.classList.add("logoS");
   im.remove();
 }
-if (currentIsSmallScreen == isSmallScreen) {
+if (window.innerWidth < 750) {
   end.classList.toggle("hidden");
   end.style.paddingRight = "5px";
   end.style.paddingTop = "5px";
@@ -43,6 +42,7 @@ if (currentIsSmallScreen == isSmallScreen) {
     close.addEventListener("click", closeNav);
   }
 }
+
 
 dropdownMenu1.addEventListener("mouseenter", function () {
   dropdownMenu1Content.classList.remove("hidden");
@@ -75,3 +75,4 @@ dropdownMenu2.addEventListener("mouseleave", function () {
   }
   img2.src = "icon-arrow-down.svg";
 });
+
