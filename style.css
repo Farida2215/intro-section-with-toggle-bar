@@ -274,7 +274,7 @@ span {
     display: block;
     width: 100%;
     height: fit-content;
-    content: url("./images/image-hero-mobile.png");
+    content: url("image-hero-mobile.png");
   }
 
   .aside p {
